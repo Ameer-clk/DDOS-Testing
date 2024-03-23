@@ -14,8 +14,8 @@ def flood(url, count, delay):
         time.sleep(delay)  # Add a delay between each request
 
 def main():
-    url = "https://example.com/api/post_message"
-    count = 200
+    url = "enter the target url"
+    count = 200 # Adjus the count or requests
     delay = 1  # Adjust the delay time as desired
 
     flood(url, count, delay)
