@@ -16,9 +16,9 @@ Usage:
 
 Command Syntax:
 python botflood.py <url> <count> <delay>
-- <url>: The target URL to flood.
-- <count>: The number of requests to send.
-- <delay>: The delay time between each request in seconds.
+<url>: The target URL to flood.
+<count>: The number of requests to send.
+<delay>: The delay time between each request in seconds.
 
 Example:
 ```
