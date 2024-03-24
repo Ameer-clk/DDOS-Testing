@@ -7,7 +7,12 @@ This script floods a target URL with spam messages by sending a specified number
 ### Prerequisites
 
 - Python 3.x installed on your system.
-- Required Python packages installed. You can install them using `pip install -r requirements.txt`.
+- Required Python packages installed. You can install them using:
+
+```
+pip install -r requirements.txt
+
+```
 
 ### Running the Script
 
