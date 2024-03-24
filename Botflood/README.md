@@ -1,51 +1,44 @@
-# URL Flooder
+###################################
+#            BotFlood             #
+###################################
 
-This script floods a target URL with spam messages by sending a specified number of requests with a specified delay between each request.
+Description:
+BotFlood is a Python script designed to flood a target URL with spam messages. It utilizes the requests library to send POST requests to the specified URL with a customizable message payload. This tool can be useful for testing the resilience of web servers against spam attacks or for educational purposes. However, it should be used responsibly and ethically.
 
-## Usage
+Requirements:
+- Python 3.x
+- Requests library (install via pip: pip install requests)
 
-### Prerequisites
+Usage:
+1. Clone or download the BotFlood repository to your local machine.
+2. Navigate to the directory containing the BotFlood script.
+3. Open a terminal or command prompt in that directory.
 
-- Python 3.x installed on your system.
-- Required Python packages installed. You can install them using:
+Command Syntax:
+python botflood.py <url> <count> <delay>
+- <url>: The target URL to flood.
+- <count>: The number of requests to send.
+- <delay>: The delay time between each request in seconds.
+
+Example:
+```
+python botflood.py http://example.com/api 100 0.5
 
 ```
-pip install -r requirements.txt
+This command will send 100 POST requests to http://example.com/api with a delay of 0.5 seconds between each request.
 
-```
+Arguments:
+- url: The URL of the target server or API endpoint.
+- count: The number of requests to be sent to the target.
+- delay: The time delay between each request, in seconds.
 
-### Running the Script
+Important Notes:
+- Ensure that you have the necessary permissions to perform flood testing on the specified URL. Unauthorized flooding of websites or servers can be illegal and unethical.
+- Use this tool responsibly and only on systems you own or have explicit permission to test.
+- Flooding a server with excessive requests can cause disruption of services and may result in legal consequences.
+- By using this tool, you agree to accept all responsibility for any actions taken.
 
-1. Clone this repository or download the `url_flooder.py` file.
-2. Open a terminal or command prompt.
-3. Navigate to the directory containing `url_flooder.py`.
-4. Run the script using the following command:
-
-
-
-Replace `<url>` with the target URL to flood, `<count>` with the number of requests to send, and `<delay>` with the delay time between each request in seconds.
-
-### Example
-
-```
-python url_flooder.py http://example.com/spam_endpoint 100 1.0
-
-```
+Disclaimer:
+This tool is provided for educational and testing purposes only. The author assumes no responsibility for any misuse or damage caused by the use of this script. Always use this tool in compliance with applicable laws and regulations.
 
 
-This command will send 100 spam messages to `http://example.com/spam_endpoint` with a delay of 1 second between each request.
-
-## Arguments
-
-- `url`: The target URL to flood.
-- `count`: The number of requests to send.
-- `delay`: The delay time between each request in seconds.
-
-## Notes
-
-- Ensure that you have permission to flood the target URL. Flooding a website without proper authorization may be illegal and unethical.
-- Use this script responsibly and only for testing purposes on systems you own or have explicit permission to test.
-
-## Disclaimer
-
-The author of this script is not responsible for any misuse or damage caused by using this script. Use it at your own risk.
