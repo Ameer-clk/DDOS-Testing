@@ -9,10 +9,11 @@ Usage:
 1. Ensure you have Python installed on your system.
 2. Install the required dependencies using pip:
 
-   ```
-   pip install requests
+```
+ pip install requests
 
-   ```
+```
+
 3. Run the script from the command line with the desired parameters:
 
 ```
