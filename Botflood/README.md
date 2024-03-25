@@ -8,7 +8,7 @@ This is a simple Python script that demonstrates TCP flooding. TCP flooding invo
 2. Run the script using Python.
 
 ```
-python tcp_flooder.py
+python botfood.py
 
 ```
 
