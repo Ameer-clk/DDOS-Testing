@@ -6,10 +6,10 @@ This is a simple Python script to flood a target URL with HTTP GET requests usin
 
 1. Install the required library:
 
-   ```
-   pip install requests
+```
+pip install requests
 
-   ```
+```
 
 Copy the flood.py script to your project directory.
 
