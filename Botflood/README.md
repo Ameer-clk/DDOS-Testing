@@ -1,44 +1,54 @@
-###################################
-#            BotFlood             #
-###################################
-
-Description:
-BotFlood is a Python script designed to flood a target URL with spam messages. It utilizes the requests library to send POST requests to the specified URL with a customizable message payload. This tool can be useful for testing the resilience of web servers against spam attacks or for educational purposes. However, it should be used responsibly and ethically.
-
-Requirements:
-- Python 3.x
-- Requests library (install via pip: pip install requests)
-
-Usage:
-1. Clone or download the BotFlood repository to your local machine.
-2. Navigate to the directory containing the BotFlood script.
-3. Open a terminal or command prompt in that directory.
-
-Command Syntax:
-python botflood.py <url> <count> <delay>
-<url>: The target URL to flood.
-<count>: The number of requests to send.
-<delay>: The delay time between each request in seconds.
-
-Example:
+████████████████████████████████████████████████
+█                                                █
+█        Simple Python TCP Flooding Tool          █
+█                                                █
+████████████████████████████████████████████████
+█                                                █
+█  Description                                   █
+█  This is a simple Python script that           █
+█  demonstrates TCP flooding. TCP flooding       █
+█  involves overwhelming a target server with    █
+█  a high volume of TCP connection requests,     █
+█  which can lead to denial of service (DoS)     █
+█  or distributed denial of service (DDoS)       █
+█  attacks.                                      █
+█                                                █
+████████████████████████████████████████████████
+█                                                █
+█  Usage                                         █
+█  1. Make sure you have Python installed on     █
+█     your system.                               █
+█  2. Run the script using Python.
 ```
-python botflood.py http://example.com/api 100 0.5
+█     python botflood.py
 
-```
-This command will send 100 POST requests to http://example.com/api with a delay of 0.5 seconds between each request.
-
-Arguments:
-- url: The URL of the target server or API endpoint.
-- count: The number of requests to be sent to the target.
-- delay: The time delay between each request, in seconds.
-
-Important Notes:
-- Ensure that you have the necessary permissions to perform flood testing on the specified URL. Unauthorized flooding of websites or servers can be illegal and unethical.
-- Use this tool responsibly and only on systems you own or have explicit permission to test.
-- Flooding a server with excessive requests can cause disruption of services and may result in legal consequences.
-- By using this tool, you agree to accept all responsibility for any actions taken.
-
-Disclaimer:
-This tool is provided for educational and testing purposes only. The author assumes no responsibility for any misuse or damage caused by the use of this script. Always use this tool in compliance with applicable laws and regulations.
-
-
+```                    █
+█  3. Enter the target IP address and port       █
+█     when prompted.                             █
+█  4. Enter the number of threads you want       █
+█     to use for flooding.                       █
+█  5. The script will start flooding the         █
+█     target with TCP connection requests.       █
+█                                                █
+████████████████████████████████████████████████
+█                                                █
+█  Disclaimer                                    █
+█  This script is for educational purposes       █
+█  only. Misusing this script for attacking     █
+█  targets without proper authorization is       █
+█  illegal and unethical. Use it responsibly     █
+█  and only on systems you are authorized        █
+█  to test.                                      █
+█                                                █
+████████████████████████████████████████████████
+█                                                █
+█  Note                                          █
+█  - This script uses threading to create        █
+█    multiple connections simultaneously,        █
+█    which can increase the effectiveness        █
+█    of the flooding.                            █
+█  - Ensure that you have permission to test     █
+█    the target system before running            █
+█    this script.                                █
+█                                                █
+████████████████████████████████████████████████
